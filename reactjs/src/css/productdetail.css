@@ -1,0 +1,154 @@
+/* General Container Styling */
+.product_image_area {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.s_product_inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.s_product_text h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.s_product_text h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.s_product_text ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.s_product_text ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+.s_product_text ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.s_product_text p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Product Count Input */
+.product_count {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-number {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.inumber-decrement, .number-increment {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.inumber-decrement:hover, .number-increment:hover {
+    background-color: #ccc;
+}
+
+/* Add to Cart Button */
+.btn_3 {
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn_3:hover {
+    background-color: #0056b3;
+}
+
+/* Like Button */
+.like_us {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    margin-left: 15px;
+    cursor: pointer;
+    color: #007bff;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.like_us:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Product Image Styling */
+.product_slider_img img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .s_product_inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .s_product_text h3 {
+        font-size: 22px;
+    }
+
+    .s_product_text h2 {
+        font-size: 20px;
+    }
+
+    .btn_3 {
+        width: 100%;
+        text-align: center;
+    }
+}
