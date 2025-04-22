@@ -22,6 +22,9 @@ Route::group(["middleware"=>'auth:api'] , function() {
     Route::get("brand",[Adminbrand::class,"index"]);
     Route::put("brand/{id}",[Adminbrand::class,"update"]);
     Route::delete("brand/{id}",[Adminbrand::class,"Delete"]);
+    Route::post("brand",[Adminbrand::class,"store"]);
+    Route::post("category",[Admincategory::class,"store"]);
+    Route::post("product",[Adminproduct::class,"store"]);
 
     
 

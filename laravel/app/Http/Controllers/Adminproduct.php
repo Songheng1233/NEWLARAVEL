@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\prodcut;
+
 use App\Models\product;
 use Illuminate\Http\Request;
 
-class Adminproduct extends Controller
+class  Adminproduct extends Controller
 {
     public function index(Request $request)
     {
-        $products = prodcut::all();
+        $products = product::all();
 
         return response()->json([
             "status" => 200,
@@ -25,7 +25,7 @@ class Adminproduct extends Controller
         $imageName = time().'.'.$request->image->extension();  
         $image->move(public_path('/uploads'), $imageName);
 
-        $product = new prodcut();
+        $product = new product();
         $product->category_id = $request->category_id;
         $product->brand_id = $request->brand_id;
         $product->title = $request->title;
@@ -42,7 +42,7 @@ class Adminproduct extends Controller
         ]);
     }
     public function getsingleproduct ($id,Request $request){
-        $product = prodcut::find($id);
+        $product = product::find($id);
 
         if(!$product){
             return response()->json([
@@ -59,7 +59,7 @@ class Adminproduct extends Controller
     }
     public function update($id, Request $request)
     {
-        $product = prodcut::find($id);
+        $product = product::find($id);
     
         if (!$product) {
             return response()->json([
@@ -97,7 +97,7 @@ class Adminproduct extends Controller
     }
     public function delete($id,Request $request)
     {
-        $product = prodcut::find($id);
+        $product = product::find($id);
 
         if(!$product){
             return response()->json([

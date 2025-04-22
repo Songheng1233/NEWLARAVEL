@@ -25,7 +25,7 @@ class Adminbrand extends Controller
             ]
             );
     }
-    public function stor (Request $request){
+    public function store (Request $request){
         $brand = new brands();
         $brand->name = $request->name;
         $brand->status = $request->status;
